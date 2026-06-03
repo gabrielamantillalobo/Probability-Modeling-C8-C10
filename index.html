@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Probability Modeling</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Continuous Probability Modeling Project</h1>
+    <p>C8 - C10 Global Economics</p>
+</header>
+
+<nav>
+    <a href="#simulation">Simulation Mode</a>
+    <a href="#modeling">Data Modeling Mode</a>
+    <a href="#ai">AI Development Record</a>
+</nav>
+
+<section id="simulation">
+
+<h2>Simulation Mode (C8)</h2>
+
+<label>Select Distribution:</label>
+
+<select id="distributionSelect">
+    <option value="uniform">Uniform</option>
+    <option value="triangular">Triangular</option>
+    <option value="linear">Linear</option>
+    <option value="piecewise">Piecewise</option>
+    <option value="normal">Normal</option>
+</select>
+
+<div class="controls">
+
+<h3>Parameters</h3>
+
+<label>Parameter A / Mean</label>
+<input type="number" id="paramA" value="0">
+
+<label>Parameter B / SD</label>
+<input type="number" id="paramB" value="1">
+
+<label>Parameter C (Mode if needed)</label>
+<input type="number" id="paramC" value="0.5">
+
+</div>
+
+<div class="probability-box">
+
+<h3>Probability Calculation</h3>
+
+<label>Lower Bound</label>
+<input type="number" id="lowerBound" value="-1">
+
+<label>Upper Bound</label>
+<input type="number" id="upperBound" value="1">
+
+<button onclick="calculateProbability()">
+Calculate Probability
+</button>
+
+<p id="probabilityResult">
+Probability:
+</p>
+
+</div>
+
+<div id="pdfGraph"></div>
+
+</section>
+
+<hr>
+
+<section id="modeling">
+
+<h2>Data Modeling Mode (C9)</h2>
+
+<h3>Upload Dataset</h3>
+
+<input type="file" id="fileInput">
+
+<br><br>
+
+<label>Select Model:</label>
+
+<select id="fitModel">
+    <option value="normal">Normal</option>
+    <option value="uniform">Uniform</option>
+    <option value="linear">Linear</option>
+    <option value="piecewise">Piecewise Uniform</option>
+    <option value="triangular">Triangular</option>
+</select>
+
+<button onclick="analyzeData()">
+Analyze Dataset
+</button>
+
+<div class="results">
+
+<h3>Estimated Parameters</h3>
+
+<p id="parameterOutput">
+Waiting for data...
+</p>
+
+<h3>Model Interpretation</h3>
+
+<p id="interpretation">
+Waiting for analysis...
+</p>
+
+</div>
+
+<div id="histogramChart"></div>
+
+</section>
+
+<hr>
+
+<section id="datasetResults">
+
+<h2>Dataset Statistics</h2>
+
+<table>
+
+<tr>
+<th>Dataset</th>
+<th>Mean</th>
+<th>Standard Deviation</th>
+</tr>
+
+<tr>
+<td>Dataset 1</td>
+<td>40.39</td>
+<td>10.09</td>
+</tr>
+
+<tr>
+<td>Dataset 2</td>
+<td>13.75</td>
+<td>5.61</td>
+</tr>
+
+<tr>
+<td>Dataset 3</td>
+<td>492.22</td>
+<td>98.63</td>
+</tr>
+
+</table>
+
+</section>
+
+<hr>
+
+<section id="ai">
+
+<h2>AI Development Record</h2>
+
+<p>
+This project was developed using AI-assisted programming.
+</p>
+
+<ul>
+
+<li>
+<a href="PASTE_CHATGPT_LINK_HERE" target="_blank">
+ChatGPT Conversation 1
+</a>
+</li>
+
+<li>
+<a href="PASTE_CHATGPT_LINK_HERE" target="_blank">
+ChatGPT Conversation 2
+</a>
+</li>
+
+</ul>
+
+<h3>How AI Was Used</h3>
+
+<p>
+AI was used to assist with HTML, CSS and JavaScript development,
+distribution modeling, probability calculations, graph generation,
+and statistical parameter estimation.
+</p>
+
+<h3>Verification and Testing</h3>
+
+<p>
+All calculations were verified using the provided datasets.
+The webpage was tested with Dataset 1, Dataset 2 and Dataset 3.
+</p>
+
+</section>
+
+<footer>
+
+<p>
+Global Economics Grade 10
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
