@@ -1,0 +1,102 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f7fa;
+}
+
+header{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#2e75b6;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.controls{
+    margin-top:15px;
+}
+
+.controls input,
+.controls select{
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+}
+
+button{
+    background:#1f4e79;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#163a5c;
+}
+
+#pdfGraph,
+#histogramChart{
+    width:100%;
+    height:500px;
+    margin-top:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th{
+    background:#1f4e79;
+    color:white;
+}
+
+th, td{
+    padding:10px;
+    text-align:center;
+}
+
+footer{
+    background:#1f4e79;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.results{
+    margin-top:20px;
+}
+
+.probability-box{
+    margin-top:20px;
+    padding:15px;
+    background:#eef5ff;
+    border-radius:8px;
+}
